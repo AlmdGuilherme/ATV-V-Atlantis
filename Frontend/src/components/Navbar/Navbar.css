@@ -1,0 +1,40 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  backdrop-filter: blur(2.5px);
+  width: 100%;
+  padding: .5rem;
+  /* background-color: #88B8F3; */
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.navbar > h1 {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: rgb(255, 255, 255);
+}
+
+.navbar > ul {
+  display: flex;
+  gap: 1rem;
+  font-weight: bold;
+  color: #686868;
+  transition: .3s;
+}
+
+.not-active {
+  color: #686868;
+  transition: .3s;
+
+  &:hover {
+    color: #cfcfcf;
+  }
+}
+
+.is-active {
+  color: #fff;
+}

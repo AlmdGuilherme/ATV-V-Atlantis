@@ -1,0 +1,145 @@
+.formulario-cliente {
+  background-color: rgba(0, 0, 0, .5);
+  width: 60%;
+  height: fit-content;
+  border-radius: .3rem;
+  padding: .5rem;
+  max-height: 35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: 2rem 0;
+}
+
+.form-body {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+  padding: .5rem;
+  justify-content: space-between;
+}
+
+.form-body::-webkit-scrollbar {
+  width: 5px;
+}
+
+.form-body::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, .5);
+  border-radius: .5rem;
+}
+
+.form-body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, .8);
+  border-radius: .5rem;
+}
+
+.formulario-personal-infos, .formulario-document-infos {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  width: 49.5%;
+}
+
+.client-document {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.client-type > select {
+  background-color: transparent;
+  border: 1.5px solid rgba(0, 0, 0, .8);
+  height: 2.5rem;
+  width: 100%;
+  border-radius: .2rem;
+  padding: .25rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.client-type > select:focus {
+  outline: none;
+}
+
+.client-type > select option {
+  background-color: rgba(0, 0, 0, .8);
+  color: #fff;
+  font-weight: bold;
+}
+
+.formulario-personal-infos-address {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-input {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.formulario-input > label {
+  font-weight: bold;
+  font-size: .9rem;
+}
+
+.formulario-input > input, .formulario-input > input[type="date"] {
+  background-color: transparent;
+  border: 1.5px solid rgba(0, 0, 0, .8);
+  height: 2.5rem;
+  border-radius: .2rem;
+  padding: .25rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.formulario-input > input:focus {
+  outline: none;
+}
+
+.formulario-input > input::placeholder {
+  color: rgba(0, 0, 0, .5);
+  font-weight: 700;
+}
+
+.formulario-radios {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.formulario-radios > div {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.formulario-radios > div > label {
+  font-weight: bold;
+  font-size: .9rem;
+}
+
+.form-button {
+  width: fit-content;
+  padding: .5rem;
+  background-color: rgba(0, 110, 255, 0.525) ;
+  color: rgba(0, 31, 72, 0.925);
+  font-weight: bold;
+  border-radius: .2rem;
+  transition: .3s;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-right: 1rem;
+  
+  &:hover {
+    background-color: rgba(0, 33, 76, 0.825) ;
+    color: rgba(0, 110, 255, 0.525);
+  }
+}

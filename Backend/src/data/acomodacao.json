@@ -1,0 +1,56 @@
+[
+  {
+    "nome": "Casal Simples",
+    "camaSolteiro": 0,
+    "camaCasal": 1,
+    "suites": 1,
+    "climatizacao": true,
+    "garagem": 1,
+    "descricao": "Acomodação ideal para casais, ambiente climatizado e garagem inclusa."
+  },
+  {
+    "nome": "Família Simples",
+    "camaSolteiro": 2,
+    "camaCasal": 1,
+    "suites": 1,
+    "climatizacao": true,
+    "garagem": 1,
+    "descricao": "Espaço confortável para pequenas famílias com uma suíte."
+  },
+  {
+    "nome": "Família Mais",
+    "camaSolteiro": 5,
+    "camaCasal": 1,
+    "suites": 2,
+    "climatizacao": true,
+    "garagem": 2,
+    "descricao": "Amplo espaço para famílias maiores, com duas suítes e duas vagas de garagem."
+  },
+  {
+    "nome": "Família Super",
+    "camaSolteiro": 6,
+    "camaCasal": 2,
+    "suites": 3,
+    "climatizacao": true,
+    "garagem": 2,
+    "descricao": "A maior opção disponível, com três suítes e capacidade para grandes grupos."
+  },
+  {
+    "nome": "Solteiro Simples",
+    "camaSolteiro": 1,
+    "camaCasal": 0,
+    "suites": 1,
+    "climatizacao": true,
+    "garagem": 0,
+    "descricao": "Opção econômica e prática para quem viaja sozinho."
+  },
+  {
+    "nome": "Solteiro Mais",
+    "camaSolteiro": 0,
+    "camaCasal": 1,
+    "suites": 1,
+    "climatizacao": true,
+    "garagem": 1,
+    "descricao": "Conforto extra para solteiros, com cama de casal e garagem."
+  }
+]

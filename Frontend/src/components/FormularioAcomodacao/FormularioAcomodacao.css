@@ -1,0 +1,121 @@
+.formulario-acomodacao{
+  background-color: rgba(0, 0, 0, .5);
+  width: 35%;
+  /* height: fit-content; */
+  max-height: 38rem;
+  overflow: auto;
+  border-radius: .3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  padding: 1rem .5rem;
+  gap: .5rem;
+}
+
+.formulario-acomodacao::-webkit-scrollbar {
+  width: 5px;
+}
+
+.formulario-acomodacao::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, .5);
+  border-radius: .5rem;
+}
+
+.formulario-acomodacao::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, .8);
+  border-radius: .5rem;
+}
+
+.formulario-acomodacao > h2 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  align-self: self-start;
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+.formulario-acomodacao-body {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  width: 90%;
+  align-items: center;
+}
+
+.acomodacao-input {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  width: 90%;
+  align-items: center;
+}
+
+.acomodacao-input > label {
+  font-weight: bold;
+  font-size: .9rem;
+  color: #fff;
+  align-self: flex-start;
+}
+
+.acomodacao-input > input, .acomodacao-input > input[type="date"] {
+  background-color: transparent;
+  border: 1.5px solid rgba(0, 0, 0, .8);
+  height: 2.5rem;
+  width: 100%;
+  border-radius: .2rem;
+  padding: .25rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.acomodacao-input > input:focus {
+  outline: none;
+}
+
+.acomodacao-input > label {
+  font-weight: bold;
+  font-size: .9rem;
+  color: #fff;
+  align-self: flex-start;
+}
+
+.acomodacao-input > select {
+  background-color: transparent;
+  border: 1.5px solid rgba(0, 0, 0, .8);
+  height: 2.5rem;
+  width: 100%;
+  border-radius: .2rem;
+  padding: .25rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.acomodacao-input > select:focus {
+  outline: none;
+}
+
+.acomodacao-input > select option {
+  background-color: rgba(0, 0, 0, .8);
+  color: #fff;
+  font-weight: bold;
+}
+
+.acomodacao-button {
+  width: fit-content;
+  padding: .5rem;
+  background-color: rgba(0, 110, 255, 0.525) ;
+  color: rgba(0, 31, 72, 0.925);
+  font-weight: bold;
+  border-radius: .2rem;
+  transition: .3s;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-right: 1rem;
+  
+  &:hover {
+    background-color: rgba(0, 33, 76, 0.825) ;
+    color: rgba(0, 110, 255, 0.525);
+  }
+}

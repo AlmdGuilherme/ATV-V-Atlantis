@@ -1,0 +1,91 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Cliente {
+  id             Int      @id @default(autoincrement())
+  nome           String   @db.VarChar(100)
+  nomeSocial     String   @db.VarChar(100)
+  dataNascimento DateTime
+  tipo           String   @default("Titular") // "Titular" ou "Dependente"
+
+  responsavelId  Int?      @map("responsavel_id")
+  Responsavel    Cliente?  @relation("Familia", fields: [responsavelId], references: [id])
+  Dependentes    Cliente[] @relation("Familia")
+
+  Endereco       Endereco?
+  Documentos     Documento[]
+  Hospedagens    Hospedagem[]
+}
+
+
+model Endereco {
+  id          Int     @id @default(autoincrement())
+  clienteId   Int     @unique @map("cliente_id")
+  Cliente     Cliente @relation(fields: [clienteId], references: [id], onDelete: Cascade)
+
+  rua         String  @db.VarChar(100)
+  numero      String  @db.VarChar(10)
+  complemento String? @db.VarChar(50)
+  bairro      String  @db.VarChar(50)
+  cidade      String  @db.VarChar(50)
+  estado      String  @db.VarChar(2)
+  cep         String  @db.VarChar(10)
+}
+
+enum TipoDocumento {
+  RG
+  CPF
+  Passaporte
+}
+
+model Documento {
+  id           Int           @id @default(autoincrement())
+  tipo         TipoDocumento
+  numero       String        @db.VarChar(14)
+  dataEmissao  DateTime
+  dataValidade DateTime?
+  
+  // Agora só existe vínculo com Cliente (pois dependente também é cliente)
+  clienteId    Int?          @map("cliente_id")
+  Cliente      Cliente?      @relation(fields: [clienteId], references: [id], onDelete: Cascade)
+  
+  // Removi dependenteId pois a tabela não existe mais
+}
+
+model Acomodacoes {
+  id           Int     @id @default(autoincrement())
+  nome         String  @db.VarChar(100)
+  descricao    String  @db.Text
+  camaSolteiro Int
+  camaCasal    Int
+  suites       Int
+  garagem      Int
+  climatizacao Boolean
+
+  Hospedagens Hospedagem[]
+}
+
+enum StatusHospedagem {
+  reservado
+  ocupado
+  disponivel
+}
+
+model Hospedagem {
+  id           Int              @id @default(autoincrement())
+  dataCheckin  DateTime
+  dataCheckout DateTime
+  status       StatusHospedagem @default(reservado)
+
+  clienteId    Int         @map("cliente_id")
+  Cliente      Cliente     @relation(fields: [clienteId], references: [id])
+
+  acomodacaoId Int         @map("acomodacao_id")
+  Acomodacao   Acomodacoes @relation(fields: [acomodacaoId], references: [id])
+}

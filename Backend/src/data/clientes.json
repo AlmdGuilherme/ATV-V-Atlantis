@@ -1,0 +1,87 @@
+[
+  {
+    "nome": "Ana Pereira da Silva",
+    "nomeSocial": "Ana Silva",
+    "tipo": "Titular",
+    "dataNascimento": "1990-05-15",
+    "endereco": {
+      "rua": "Avenida Paulista",
+      "numero": "1000",
+      "complemento": "Apto 45B",
+      "bairro": "Bela Vista",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "cep": "01310-100"
+    },
+    "documentos": [
+      {
+        "tipo": "CPF",
+        "numero": "123.456.789-00",
+        "dataEmissao": "2010-01-20"
+      }
+    ],
+    "dependentes": []
+  },
+  {
+    "nome": "Carlos Eduardo Santos",
+    "nomeSocial": "Cadu Santos",
+    "tipo": "Titular",
+    "dataNascimento": "1985-08-22",
+    "endereco": {
+      "rua": "Rua das Flores",
+      "numero": "50",
+      "complemento": null,
+      "bairro": "Centro",
+      "cidade": "Rio de Janeiro",
+      "estado": "RJ",
+      "cep": "20000-000"
+    },
+    "documentos": [
+      {
+        "tipo": "RG",
+        "numero": "22.333.444-5",
+        "dataEmissao": "2005-06-10"
+      }
+    ],
+    "dependentes": [
+      {
+        "nome": "Julia Santos",
+        "nomeSocial": "Juju", 
+        "tipo": "Dependente",
+        "dataNascimento": "2015-02-10",
+        "documentos": [
+          {
+            "tipo": "CPF",
+            "numero": "999.888.777-66",
+            "dataEmissao": "2016-01-01"
+          }
+        ]
+        
+      }
+    ]
+  },
+  {
+    "nome": "Fernanda Oliveira",
+    "nomeSocial": "Fê Oliveira",
+    "tipo": "Titular",
+    "dataNascimento": "1995-12-01",
+    "endereco": {
+      "rua": "Rua da Liberdade",
+      "numero": "300",
+      "complemento": "Casa 2",
+      "bairro": "Liberdade",
+      "cidade": "Salvador",
+      "estado": "BA",
+      "cep": "40000-111"
+    },
+    "documentos": [
+      {
+        "tipo": "Passaporte",
+        "numero": "BR123456",
+        "dataEmissao": "2023-01-15",
+        "dataValidade": "2033-01-15"
+      }
+    ],
+    "dependentes": []
+  }
+]

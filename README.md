@@ -13,7 +13,7 @@
 ### 1. Em um terminal, clone o repositório:
 
 ```bash
-git clone https://github.com/AlmdGuilherme/ATV-IV-Atlantis
+git clone https://github.com/AlmdGuilherme/ATV-V-Atlantis
 cd ATV-V-Atlantis
 ```
 ### 2. Instale as dependências:

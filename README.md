@@ -28,6 +28,10 @@ cd Frontend
 npm install
 ```
 ### 3. Compilação:
+#### Crie um banco e passe a URL do MySQL num arquivo .env: 
+```bash
+DATABASE_URL="mysql://root<SUA_SENHA>@localhost:3306/<NOME_DO_BANCO>
+```
 #### No Backend é preciso popular o banco antes:
 ```bash
 npx primsa db seed
